@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #18534F;
+}
+
+nav{
+    justify-self: right;
+}
+
+header{
+    display: grid;
+    color: #D6955B;
+    background-color: #ECF8F6;
+    grid-template-columns: 3fr 1fr;
+}
+nav ul{
+    display: flex;
+    align-self: self-end;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #D6955B;
+}
+
+.produit{
+    display: grid;
+    padding-top: 0;
+    padding: 10px 60px 60px 60px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.titre-section-produit{
+    padding-top: 80px;
+    text-align: center;
+}
+.produit-item img, .product-name, .product-description{
+    align-self: center;
+}
+
+.produit-item{
+    display: flex;
+    padding: 30px;
+    margin: 40px;
+    flex-direction: column;
+    background-color: #dcd1c254;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #d6945ba9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #04AA6D;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.product-image{
+    border-radius: 5px;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .product-image{
+        width: 150px;
+        height: 100px;
+    }
+
+    #carouselExampleIndicators{
+        display: none;
+    }
+    header{
+        display: grid;
+        color: #D6955B;
+        background-color: #ECF8F6;
+        grid-template-columns: 1fr;
+}
+nav{
+    justify-self: center;
+}
+header h1{
+    text-align: center;
+}
+.produit{
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr;
+}
+}
+/* Le comportement de l'application pour les devices de taille >576px et  <768px */
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    header{
+            display: grid;
+            color: #D6955B;
+            background-color: #ECF8F6;
+            grid-template-columns: 1fr;
+    }
+    nav{
+        justify-self: center;
+    }
+    header h1{
+        text-align: center;
+    }
+    .produit{
+        display: grid;
+        padding: 20px;
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .produit-item{
+        padding: 0;
+        margin: 10px;
+        flex-direction: column;
+    }
+  }
+/* Le comportement de l'application pour les devices de taille >768px et  <1200px */
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .produit{
+        display: grid;
+        padding-top: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .produit-item{
+        padding: 0;
+        margin: 10px 20px 20px 10px;
+        flex-direction: column;
+    }
+  }
+/* Le comportement de l'application pour les devices de taille > 1200px */
+
+  @media screen and (min-width: 1200px) {
+    .produit{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .produit-item{
+        padding: 0;
+        margin: 10px 30px 20px 10px;
+        flex-direction: column;
+    }
+  }
